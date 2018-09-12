@@ -45,6 +45,6 @@ std::string GetXMLDoc()
 
 int main( int argc, char* argv[] ) {
     std::string strDoc = GetXMLDoc();
-
+    std::cout << strDoc;
     return 0;
 }
