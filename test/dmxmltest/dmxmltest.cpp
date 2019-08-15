@@ -1,10 +1,8 @@
 
-#include "dmos.h"
-#include "dmutil.h"
-#include "dmtypes.h"
-#include "dmformat.h"
-#include "pugixml.hpp"
 
+#include "pugixml.hpp"
+#include <iostream>
+#include <sstream>
 using namespace pugi;
 
 std::string GetXMLDoc()
