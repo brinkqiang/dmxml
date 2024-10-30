@@ -17,20 +17,3 @@ MESSAGE(STATUS "VERSION: ${DMXML_VERSION}")
 OPTION(USE_DMXML "use dmxml" OFF)
 LibImport("dmxml" "src")
 ExeImport("test" "dmxml")
-
-#ADD_CUSTOM_COMMAND(
-#TARGET dmxmltest
-#PRE_BUILD
-#COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#${CMAKE_CURRENT_SOURCE_DIR}/config/test.csv
-#$<TARGET_FILE_DIR:dmxmltest>
-#)
-
-#INSTALL(DIRECTORY include/ DESTINATION include)
-#INSTALL(TARGETS dmxml
-#        RUNTIME DESTINATION bin
-#        LIBRARY DESTINATION lib
-#        ARCHIVE DESTINATION lib)
-
-#SET(DMXML_LIBS "dmxml")
-#MARK_AS_ADVANCED(${DMXML_LIBS})
