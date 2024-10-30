@@ -42,7 +42,7 @@ std::string GetXMLDoc()
     return ss.str();
 }
 
-void SetXMLDoc(const std::string& strDoc)
+std::string SetXMLDoc(const std::string& strDoc)
 {
     xml_document doc;
     doc.load_buffer(strDoc.data(), strDoc.size());
@@ -66,11 +66,17 @@ void SetXMLDoc(const std::string& strDoc)
         xml_node TotalMsgSize = (*It).child("TotalMsgSize");
     }
     xml_node MsgLast = datas.child("MsgLast");
+
+	std::stringstream ss;
+	doc.save(ss);
+
+    return ss.str();
 }
 
 int main( int argc, char* argv[] ) {
     std::string strDoc = GetXMLDoc();
-    std::cout << strDoc;
-    SetXMLDoc(strDoc);
+    std::cout << strDoc << std::endl;
+    std::string strNew = SetXMLDoc(strDoc);
+    std::cout << strNew << std::endl;
     return 0;
 }
