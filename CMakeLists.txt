@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.8)
 
 PROJECT(dmxml)
 
@@ -7,13 +7,5 @@ INCLUDE(cmake/ModuleImport.cmake)
 INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
 
-SET(DMXML_VERSION_MAJOR "1")
-SET(DMXML_VERSION_MINOR "0")
-SET(DMXML_VERSION_PATCH "1")
-SET(DMXML_VERSION "${DMXML_VERSION_MAJOR}.${DMXML_VERSION_MINOR}.${DMXML_VERSION_PATCH}")
-
-MESSAGE(STATUS "VERSION: ${DMXML_VERSION}")
-
-OPTION(USE_DMXML "use dmxml" OFF)
 LibImport("dmxml" "src")
 ExeImport("test" "dmxml")
