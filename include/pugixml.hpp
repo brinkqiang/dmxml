@@ -563,6 +563,8 @@ namespace pugi
 		bool set_value(const char_t* rhs, size_t size);
 		bool set_value(int32_t rhs);
 		bool set_value(int64_t rhs);
+		bool set_value(uint32_t rhs);
+		bool set_value(uint64_t rhs);
 		bool set_value(double rhs);
 		bool set_value(const std::string& rhs);
 

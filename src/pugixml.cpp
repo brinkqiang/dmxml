@@ -5839,7 +5839,19 @@ namespace pugi
 		return set_value(value_str.c_str());
 	}
 
+	PUGI_IMPL_FN bool pugi::xml_node::set_value(uint32_t rhs)
+	{
+		std::string value_str = std::to_string(rhs);
+		return set_value(value_str.c_str());
+	}
+
 	PUGI_IMPL_FN bool pugi::xml_node::set_value(int64_t rhs)
+	{
+		std::string value_str = std::to_string(rhs);
+		return set_value(value_str.c_str());
+	}
+
+	PUGI_IMPL_FN bool pugi::xml_node::set_value(uint64_t rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
