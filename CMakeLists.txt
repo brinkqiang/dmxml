@@ -8,4 +8,8 @@ INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
 
 LibImport("dmxml" "src")
-ExeImport("test" "dmxml")
+
+if (PROJECT_IS_TOP_LEVEL)
+    ExeImport("test" "dmxml")
+endif(PROJECT_IS_TOP_LEVEL)
+

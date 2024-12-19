@@ -1,8 +1,4 @@
 
-rem - clone code
-rem git clone https://github.com/brinkqiang/dmxml.git
-rem pushd dmxml
-rem git submodule update --init --recursive
 
 rmdir /S /Q build
 mkdir build
