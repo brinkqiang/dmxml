@@ -5833,37 +5833,37 @@ namespace pugi
 		return impl::strcpy_insitu(_root->name, _root->header, impl::xml_memory_page_name_allocated_mask, rhs, size);
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(int32_t rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(int32_t rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(uint32_t rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(uint32_t rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(int64_t rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(int64_t rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(uint64_t rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(uint64_t rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(double rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(double rhs)
 	{
 		std::string value_str = std::to_string(rhs);
 		return set_value(value_str.c_str());
 	}
 
-	PUGI_IMPL_FN bool pugi::xml_node::set_value(const std::string& rhs)
+	PUGI_IMPL_FN bool xml_node::set_value(const std::string& rhs)
 	{
 		return set_value(rhs.c_str());
 	}
